@@ -42,6 +42,10 @@ const yargsConf = yargs
 const argv = yargsConf.argv;
 setExecOptions(argv);
 
+if (argv.dryRun) {
+  console.log('DRY RUN'.magenta);
+}
+
 let version;
 
 const versionBumpOptions = {
